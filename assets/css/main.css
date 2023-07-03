@@ -204,14 +204,6 @@ input, select, textarea {
 			text-align: justify;
 		}
 
-		.clearfix::after {
-			content: " ";
-			display: table;
-			clear: both;
-		}
-
-		
-
 		p.content-right {
 			-moz-columns: 1;
 			-webkit-columns: 1;
@@ -219,6 +211,12 @@ input, select, textarea {
 			columns: 1;
 			text-align: justify;
 			direction: rtl;
+		}
+
+		.clearfix::after {
+			content: " ";
+			display: table;
+			clear: both;
 		}
 
 
