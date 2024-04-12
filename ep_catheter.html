@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
+		<title>Catheterisation Robot | Engineering Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,7 +26,7 @@
 					</header>
 				-->
 					<br><br><br><br>
-					<a href="index.html#impeller" class="button">←&nbsp;&nbsp;Back to Engineering Projects: Catheter</a>
+					<a href="index.html#foams" class="button">←&nbsp;&nbsp;Back to Portfolio: Engineering Projects</a>
 				<!-- Main -->
 					<div id="main">
 
@@ -35,23 +35,199 @@
 
 								<div class="content">
 
-									<h1>Cardiac Catheterisation Robot</h1>
+									<h1>MR-Resistant Cardiac Catheterisation Robot</h1>
 									<h2>Third Year Individual Project - UCL Mechanical Engineering</h2>
 
-									<span class="image right"><img src="images/pic05.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-									<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-									<h2>Tempus veroeros</h2>
-									<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+									<h3>Overview</h3>
+									<span class="image right"><img src="images/catheter/rotary.png" alt="" /></span>
+									<ul>
+										<li>Designing and modelling a robot that can perform the cardiac catheterisation medical procedure, by steering a balloon catheter, that is magnetic resonance (MR) resistant.</li><br/>
+										
+										<li>The robot thus cannot expose any ferromagnetic materials (metals, electronics, etc.) to the strong magnetic fields present within the MR zone (allowing physicians to perform cardiac catheterisation with concurrent access to live MRI scanning).</li><br/>
+										
+										<li>Objectives for the catheterisation robot included:<br/><br/>
+											&emsp;&emsp;- Applying atleast 100mm of linear actuation to the catheter<br/>
+											&emsp;&emsp;- Applying continuous bi-directional rotary actuation to the catheter<br/>
+											&emsp;&emsp;- Minimising friction, pressure leaks and other losses, ensuring reliable and accurate steering of the catheter<br/>
+											&emsp;&emsp;- Designing an ergonomic and easy to use system for the physician to operate the catheter
+										</li><br/>
+
+										<li>A year long design project individual project delivering a novel design and 3D model, dissertation and final presentation.</li>
+									</ul>
+									
+									<h3>Methodology</h3>
+									<ul>
+
+										<li>A master/slave model was conceptualised for the robot's actuation, where pistons in the master-side are connected to pistons in the slave-side via plastic tubing acting as the fluid pipeline.</li><br/>
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div><div class="col-0"></div>
+												<div class="col-7"><span class="image fit"><img src="images/catheter/master_slave.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>This allows a master-side piston to be electronically actuated outside the MR zone, resulting in a pressure change within the pipeline which consequently actuates the slave-side piston within the MR zone.</li><br/>
+										
+										<li>A literature review was conducted into potential MR-resistant rotary actuation mechanisms that could provide the required continuous rotation, as this was a major design challenge of this project. Four distinct actuators were considered, seen below:</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-3"><span class="image fit"><img src="images/catheter/rack_pinion.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/vane_motor.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/scotch_yoke.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/radial_piston.png" alt="" /></span></div>
+											</div>
+										</div>
+										
+										<li>Following a KPI comparison between the actuators, the <strong>radial piston motor</strong> was selected as the rotary actuation system, given its potential of providing continuous rotation whilst operating reliably and without excessive friction. Its operation can be seen below.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-5"><span class="image fit"><img src="images/catheter/kpi.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/radial_piston.gif" alt="" /></span></div>
+											</div>
+										</div>
+										
+										<li>A pneumatic radial piston motor was conceptualised and mathematically modelled, seen below. It incorporated only three cylinders to minimise losses and potential alignment issues, and a corresponding triangular frame to anchor these cylinders. The cylinder rods would connect to a revolving plate which rotates a crankshaft: the output of which the catheter is affixed to.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-1"></div>
+												<div class="col-5"><span class="image fit"><img src="images/catheter/rotary_2d.png" alt="" /></span></div>
+												<div class="col-5"><span class="image fit"><img src="images/catheter/rotary_mechanism.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>A Luer Lock medical syringe was selected for use as the cylinders due to leak-resistance - and modelled according to specification.</li><br/>
+
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-1"></div><div class="col-0"></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/syringe_model.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/piston_exploded.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/piston.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>A bracket was designed for the syringe, comprising a cap which anchors to the frame, side panels and a circular base: being joined by acrylic screws (as opposed to metal). The custom polyisoprene plunger comprises a hole to connect to the revolving plate.</li><br/>
+										
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-3"></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/frame_front.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/frame_back.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The frame (above) incorporates three outer through-holes with press-fitted ceramic bearings to anchor the cylinders, and a central through-hole to anchor the crankshaft: which rotates within the recessed plate. The two lower through-holes accommodate press-fitted slide bearings for linear translation along acrylic rods, and the two threaded holes in the back plate screw to linear actuator.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-3"></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/revolving.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/revolving_exploded.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The revolving plate incorporates two sections connected by fixed rods, along with three joints on which the cylinder plungers anchor. The central through-holes accommodate press-fitted bearings for the crankshaft to pass through.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-4"><span class="image fit"><img src="images/catheter/crankshaft.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/catheter/crankshaft_exploded.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The crankshaft anchors to the frame at the rear, and passes through the revolving plate. At the front, it comprises a screw-on sleeve with hollowed sections to insert the catheter: which goes through the tip of the sleeve cap and is secured by an O-ring.</li><br/>
+
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-4"></div>
+												<div class="col-4"><span class="image fit"><img src="images/catheter/rotary.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The assembled rotary actuator hence provides continuous bidirectional rotation, determined by the extensions of the cylinders.</li><br/>
+
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-4"><span class="image fit"><img src="images/catheter/linear.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/catheter/slave_side.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The linear actuator comprises an enclosure constructed from 5mm thickness acrylic sheets, joined by ceramic screws. A cylinder secured to the enclosure via bracket screws into the rear of the rotary actuator, translating it along the 7mm diameter acrylic rods. Thus, the fully assembled slave-side is seen on the right.</li><br/>
+
+										<li>On the master-side, the actuation is electronically performed using a 40mm NEMA stepper motor, seen below on the left.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-1"></div><div class="col-0"></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/nema.png" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/catheter/master_actuator.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The master-side actuator (right) consists of a series of 2mm thick acrylic sheets connected by three M5 threaded bars, the central bar being joined to the stepper motor via an M5 jaw shaft coupler. The cylinder is secured between the sheets at its plunger and flange. Actuation of the stepper motor will hence actuate the cylinder, which is connected to the slave-side via pipeline.</li><br/>
+
+									</ul>
+
+									<h3>Results</h3>
+									<ul>										
+										<li>Thus, the final design is a ready-to-build MR-Resistant cardiac catheterisation robot which provides 127.5mm of linear actuation, and continuous bi-directional rotary actuation to the balloon catheter, as required.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-8"><span class="image fit"><img src="images/catheter/final_large.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The four master-side actuators, which are electronically controlled, remain outside of the MR zone, with three of them controlling the rotary actuator and one controlling the linear actuator, through the pipelines.</li><br/>
+										
+										
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-1"></div><div class="col-0"></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/model.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/profiles.png" alt="" /></span></div>
+												<div class="col-3"><span class="image fit"><img src="images/catheter/tinkercad.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The cylinder profiles were geometrically derived, given the finalised cylinder, revolving plate and crankshaft dimensions.  The setup was constructed and programmed in tinkercad, and the cylinder actuation profiles were calculated and mapped.</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-3"></div>
+												<div class="col-6"><span class="image fit"><img src="images/catheter/materials.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The bill of materials shows a total cost for the catheterisation robot of £296.27, including the ABS and polyisoprene filaments, where most of the cost comes from the stepper motors, ceramic and slide bearings.</li><br/>
+
+										<li>The project received very high marks in the final presentation (80+), having impressed the panel greatly for the engineering concepts applied.</li>
+									</ul>
+									
+
 								</div>
 
 					</div>
-					<a href="index.html#impeller" class="button">←&nbsp;&nbsp;Back to Engineering Projects: Catheter</a>
+					<a href="index.html#foams" class="button">←&nbsp;&nbsp;Back to Portfolio: Engineering Projects</a>
 
 				<!-- Footer -->
 
 					<footer id="footer">
-						<p class="copyright">&copy; Usman Khan, 2023</a>.</p>
+						<p class="copyright">&copy; Usman Khan, 2024</a>.</p>
 					</footer>
 
 			</div>

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
+		<title>PW100G Impeller | Engineering Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,7 +26,7 @@
 					</header>
 				-->
 					<br><br><br><br>
-					<a href="index.html#engineering_projects" class="button">←&nbsp;&nbsp;Back to Engineering Projects: Impeller</a>
+					<a href="index.html#catheter" class="button">←&nbsp;&nbsp;Back to Portfolio: Engineering Projects</a>
 				<!-- Main -->
 					<div id="main">
 
@@ -37,21 +37,112 @@
 
 									<h1>PW100G Impeller</h1>
 									<h2>Second Year Group Design Project - UCL Mechanical Engineering</h2>
+									
+									<h3>Overview</h3>
+									<span class="image right"><img src="images/impeller/pw1000g.png" alt="" /></span>
+									<ul>
+										<li>Designing and manufacturing an impeller for the Pratt & Whitney Canada PW100 turboprop engine that exhibits superior efficiency and performance.</li><br/>
+										<li>A scaled-down impeller was required to be 3D printed out of nylon, which was tested for its performance and then extrapolated to the performance of the real impeller.</li><br/>
+										<li>Objectives included incorporating environmentally friendlier manufacturing processes and materials at lower costs, alongside a more reliable impeller design requiring less maintenance and replacement.</li><br/>
+										<li>This was a year-long group project, delivering the prototype impeller, dissertation and multiple presentations.</li>
+									
+									</ul>
+									
+									<h3>My contributions</h3>
 
-									<span class="image right"><img src="images/pic05.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-									<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-									<h2>Tempus veroeros</h2>
-									<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+									<ul>
+										<span class="image right"><img src="images/impeller/casing.png" alt="" /></span>
+										<li>Constraints for the prototype impeller design included:<br/><br/>
+											&emsp;&emsp;- Pump casing, assembly and mount dimensions within provided specifications (see right →)<br/>
+											&emsp;&emsp;- Impeller operating speed of 2900rpm, with required pressure rise of 0.8 bar<br/>
+											&emsp;&emsp;- Number of impeller blades to be between 5 and 10 <br/>
+											&emsp;&emsp;- Heights from 0.004-0.02m for inlet blades, and from 0.004-0.08m for outlet blades<br/>
+											&emsp;&emsp;- Volute spiral angle of 5.3°, outflow misalignment angle of up to ±1.5°<br/>
+										</li><br/>
+										
+										<li>To create my individual design, I employed analytical calculations to create a mathematical model using MATLAB: tweaking inlet and outlet blade numbers, angles and heights [within constraints] to minimise inlet blockage factor and outflow misalignment.</li><br/>
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-4"><span class="image fit"><img src="images/impeller/matlab_code.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/impeller/matlab_graph.png" alt="" /></span></div>
+											</div>
+										</div>
+										
+										<li>I then 3D modelled the analytically best variations, utilising computational fluid dynamics simulations in ANSYS Fluent to compare their performances. Given the Nylon 3D printing material, tolerances of ±0.3mm were factored into the models along with casing clearance of 0.1mm.</li><br/>
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-1"></div>
+												<div class="col-6"><span class="image fit"><img src="images/impeller/individual_design.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/impeller/fluent.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>In selecting the material for the full-size impeller; PW100 datasheets contained operating rpms, take-off and working temperature ranges that the impeller would experience, providing required melting point and corrosion-resistance metrics.</li><br/>
+										<li>Materials with further favourable indices such as (stiffness, fracture toughness, yield strength and fatigue strength) / density were filtered for and evaluated in CES Edupack</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-1"></div>
+												<div class="col-5"><span class="image fit"><img src="images/impeller/edupack.png" alt="" /></span></div>
+												<div class="col-5"><span class="image fit"><img src="images/impeller/material.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The final eight materials were evaluated in a decision matrix regarding carbon footprints and emissions, leading to AISI 302 Stainless Steel HT grade D as the selection.</li><br/>
+										
+										<li>In selecting the manufacturing process: the volume of the real PW100 impeller was interpolated from datasheets and compared to the prototype impeller, determining a scaling ratio of 714.</li><br/>
+										
+										<li>This estimated the PW100 impeller mass at 75kg, with upper-bound tolerances of 1mm. An economic batch size range of 370±185 was inferred from PW100 sales figures, and minimum material utilisation fraction was set to 0.75-0.85.</li><br/>
+										
+										<li>These manufacturing restrictions were applied to CES, and the three remaining processes were evaluated in a decision matrix to arrive at ceramic mold casting as the most enviromentally friendly manufacturing process for the steel impeller.</li>
+
+									</ul>
+
+									<h3>Results</h3>
+									<ul>
+										<li>The impeller design was refined with group members through decision matrices, to arrive at the final 6-blade design:</li><br/>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-4"><span class="image fit"><img src="images/impeller/final_design.png" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/impeller/final_model_front.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>It was then 3D printed and tested: exhibiting an efficiency of 29.71%. This scored in the top half of the cohort whilst having a lower blade number of 6, delivering an appealing blend of reliability and performance. </li><br/>
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-4"></div>
+												<div class="col-4"><span class="image fit"><img src="images/impeller/impeller.png" alt="" /></span></div>
+											</div>
+										</div>
+										
+										<li>Life Cycle Analysis carried out on CES Eco Audit showed the material + manufacturing footprints of the impeller to only sum to 0.5% of total engine operation footprint. Additionally, it was demonstrated that the component is able to be recycled infinitely.</li><br/>
+										
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-2"></div>
+												<div class="col-8"><span class="image fit"><img src="images/impeller/audit_table.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<li>The final presentation was very well received by the panel, and the project received a high first-class [79%].</li>
+									</ul>
+
 								</div>
 
 					</div>
-					<a href="index.html#engineering_projects" class="button">←&nbsp;&nbsp;Back to Engineering Projects: Impeller</a>
+					<a href="index.html#catheter" class="button">←&nbsp;&nbsp;Back to Portfolio: Engineering Projects</a>
 
 				<!-- Footer -->
 
 					<footer id="footer">
-						<p class="copyright">&copy; Usman Khan, 2023</a>.</p>
+						<p class="copyright">&copy; Usman Khan, 2024</a>.</p>
 					</footer>
 
 			</div>
